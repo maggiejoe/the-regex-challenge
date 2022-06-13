@@ -34,6 +34,18 @@ As you go through this gist, you'll learn how the Regex expression above works t
 
 ### Anchors
 
+Anchor: ^ 
+
+Anchors do not match any characters but rather say something about a string or what follows.
+
+For example: `^The` means that the string must begin with `The`
+
+Anchor: $
+
+This anchor is very similar to the `^` however instead of identifying the beginning of a string, it identifies the end
+
+For example: `end$` means that the string must end with `end`
+
 ### Quantifiers
 
 ### OR Operator
@@ -41,6 +53,10 @@ As you go through this gist, you'll learn how the Regex expression above works t
 ### Character Classes
 
 ### Flags
+
+Flags use the `/`, forward slash symbol at the beginning and end of the Regex.
+
+Flags are what holds the Regex together and tells the finder what to look for between these two characters.
 
 ### Grouping and Capturing
 
