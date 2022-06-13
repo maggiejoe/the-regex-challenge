@@ -32,21 +32,43 @@ As you go through this gist, you'll learn how the Regex expression above works t
 
 /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
 
-### Anchors
-
-Anchor: ^ 
+### Anchors 
 
 Anchors do not match any characters but rather say something about a string or what follows.
 
-For example: `^The` means that the string must begin with `The`
+Anchor: `^`
 
-Anchor: $
+    This anchor identifies the beginning of a string of data
 
-This anchor is very similar to the `^` however instead of identifying the beginning of a string, it identifies the end
+    For example: `^The` means that the string must begin with `The`
 
-For example: `end$` means that the string must end with `end`
+    In the case for finding HEX values, the `^#` means that the beginning of the string must match the character #. The # is used to indicate the differences between hexadecimal and decimal numbers which is very important with HEX values. 
+
+    If you're unsure of the differences of hexadecimal and decimal numbers, use the following link below for more details.
+
+    [Hexadecimal vs Decimal Numbers](https://www.schoolelectronic.com/hexadecimal-vs-decimal/)
+
+Anchor: `$`
+
+    This anchor is very similar to the `^` however instead of identifying the beginning of a string, it identifies the end
+
+    For example: `end$` means that the string must end with `end`
 
 ### Quantifiers
+
+A quantifier specifies how many times a character or group of characters must be present in a specific input in order to find a match. 
+
+Quantifier: `?`
+
+    The `?` is used to describe a boolean by using 0 or 1 (true, or false). By using the `?`, it makes the character or symbol coming before it is optional.
+
+    For example: `Plants!?` will match either `Plants` or `Plants!` 
+
+    In our Regex, the `?` following the `#` means that the `#` is optional and may or may not be needed at the beginning of the expression.
+
+Quanitfier: `{}`
+
+    The `{}` 
 
 ### OR Operator
 
@@ -60,7 +82,23 @@ Flags are what holds the Regex together and tells the finder what to look for be
 
 ### Grouping and Capturing
 
+Grouping and Capturing is a way of treating multiple characters as a single unit.
+
+Grouping/Capturing: `()`
+
+    The `()` is used to bring all of the characters within the parenthesis into a single array
+
+    For example: `(hello)` brings the single characters `h`, `e`, `l`, `l`, `o` together into a single group
+
+    In our Regex, the `([a-f0-9]{6}|[a-f0-9]{3})` is putting the values between the parenthesis together. What is happening between them is described in more detail throughout this document
+
 ### Bracket Expressions
+
+Bracket Expression: `[]`
+
+    The expression `[]` is used to combine any characters (symbols, alphabetic, numeric, special characters...etc.) within the brackets.
+
+    For example: `[a-f0-9]` in our regex is combining the combination of letters a-f and numbers 0-9 into one string. The hypen between the `a-f` and `0-9` indicates the range from once character to the other. Meaning any number including `0` and up to and including `9`, and any letter including `a` and upto and including `f`.
 
 ### Greedy and Lazy Match
 
