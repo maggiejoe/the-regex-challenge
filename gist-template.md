@@ -68,9 +68,21 @@ Quantifier: `?`
 
 Quanitfier: `{}`
 
-    The `{}` 
+    The `{}` around a number indicates that the preceeding code should happen x amount of times.
+
+    For example: `a{3}` matches a string of `aaa`.
+
+    In the HEX values Regex the `[a-f0-9]{6}` indicates that the expression in the `[]` must have 6 instances of that string. In the `[a-f0-9]{3}` expression, the `{3}` indicates that the expression preceeding it must have 3 instances of that string. In both expression in the `[]`, we now understand that the quantifier will allow each expression to happen either 6 or 3 times using the characters a-f and/or numbers 0-9.
 
 ### OR Operator
+
+OR Operator: `|`
+
+    Similar to the OR operator in JavaScript `||`, it means that it will match the characters or expressions on either the left or right side of the `|`.
+
+    For example: `hello|HELLO` will match either `hello` or `HELLO` from the string.
+
+    In our Regex, this means that it will match either a 6 character string with the characters of a-f and/or 0-9 OR a 3 character string with the characters a-f and/or 0-9. Anthing that does not match 6 or 3 characters will not match the Regex.
 
 ### Character Classes
 
@@ -102,11 +114,13 @@ Bracket Expression: `[]`
 
 ### Greedy and Lazy Match
 
-### Boundaries
+A Greedy match means match the longest possible string. A Lazy Match means match the shortest possible string. 
 
-### Back-references
+For example: `h.+l` matches the `hell` in `hello` but `h.+?` matches the `hel`.
 
-### Look-ahead and Look-behind
+We know that normal quantifies such as the `{}` in our Regex are greedy, meaning that the regex will match as many possible occurances of the specific pattern preceeding it. If our expression had a `?` then it would become a lazy match and would match the fewest possible occurances of the specific pattern preceeding it. 
+
+In the case of our Regex, we know that it is greedy.
 
 ## Author
 
