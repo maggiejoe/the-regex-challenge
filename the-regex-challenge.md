@@ -12,7 +12,7 @@ If you aren't familiary with Hex Values, they are values used to display specifi
 
 (0, 128, 0)
 
-As you go through this gist, you'll learn how the Regex expression above works to find any Hex Values within a document/.
+As you go through this gist, you'll learn how the Regex expression above works to find any Hex Values within a document/file.
 
 ## Table of Contents
 
