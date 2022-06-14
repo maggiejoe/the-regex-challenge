@@ -19,14 +19,10 @@ As you go through this gist, you'll learn how the Regex expression above works t
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
 - [OR Operator](#or-operator)
-- [Character Classes](#character-classes)
 - [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
 
@@ -83,8 +79,6 @@ OR Operator: `|`
     For example: `hello|HELLO` will match either `hello` or `HELLO` from the string.
 
     In our Regex, this means that it will match either a 6 character string with the characters of a-f and/or 0-9 OR a 3 character string with the characters a-f and/or 0-9. Anthing that does not match 6 or 3 characters will not match the Regex.
-
-### Character Classes
 
 ### Flags
 
